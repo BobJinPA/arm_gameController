@@ -20,6 +20,7 @@ try:
         events = pygame.event.get()
         for event in events:
             if event.type == pygame.KEYDOWN:
+                print "KEYDOWN!!"
                 if event.key == pygame.K_LEFT:
                     print "move left"
                     if dutyCycle > min:

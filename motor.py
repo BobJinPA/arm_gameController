@@ -23,7 +23,7 @@ try:
         # time.sleep(0.5)
         # p.ChangeDutyCycle(5)
         # time.sleep(0.5)
-        p.ChangeDutyCycle(2.5)
+        p.ChangeDutyCycle(1.5)
         time.sleep(0.5)
 except KeyboardInterrupt:
     p.stop()

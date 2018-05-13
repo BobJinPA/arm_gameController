@@ -1,18 +1,18 @@
 import pygame
-import RPi.GPIO as GPIO
+# import RPi.GPIO as GPIO
 import time
 
 servoPIN = 18
-min = 1.5
+min = 1.0
 max = 12.5
-dutyCycle = 1.0
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(servoPIN, GPIO.OUT)
+dutyCycle = 1.5
+# GPIO.setmode(GPIO.BCM)
+# GPIO.setup(servoPIN, GPIO.OUT)
 
-p = GPIO.PWM(servoPIN, 50) # GPIO 17 for PWM with 50Hz
-p.start(dutyCycle) # Initialization
-
-GPIO.setwarnings(False)
+# p = GPIO.PWM(servoPIN, 50) # GPIO 17 for PWM with 50Hz
+# p.start(dutyCycle) # Initialization
+#
+# GPIO.setwarnings(False)
 
 pygame.init()
 try:
@@ -29,8 +29,9 @@ try:
                     if dutyCycle < max:
                         dutyCycle = dutyCycle + 0.1
         print "duty cycle: " + str(dutyCycle)
-        p.ChangeDutyCycle(dutyCycle)
-        time.sleep(0.1)
+        # p.ChangeDutyCycle(dutyCycle)
+        time.sleep(0.2)
 except KeyboardInterrupt:
-    p.stop()
-    GPIO.cleanup()
+    print "done"
+    # p.stop()
+    # GPIO.cleanup()

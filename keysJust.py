@@ -21,11 +21,11 @@ try:
         for event in events:
             if event.type == pygame.KEYDOWN:
                 print "KEYDOWN!!"
-                if event.key == pygame.K_LEFT:
+                if event.key == pygame.K_1:
                     print "move left"
                     if dutyCycle > min:
                         dutyCycle = dutyCycle - 0.1
-                if event.key == pygame.K_RIGHT:
+                if event.key == pygame.K_5:
                     print "move right"
                     if dutyCycle < max:
                         dutyCycle = dutyCycle + 0.1

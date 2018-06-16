@@ -5,7 +5,7 @@ import serial
 
 
 class MaestroUART(object):
-    def __init__(self, device='/dev/ttyS0', baudrate=9600):
+    def __init__(self, device='/dev/ttyAMA0', baudrate=9600):
         """Open the given serial port and do any setup for the serial port.
 
         Args:

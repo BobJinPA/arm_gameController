@@ -175,7 +175,7 @@ if __name__ == '__main__':
 	min_pos = 992*4
 	max_pos = 2000*4
 
-	mu = MaestroUART('/dev/ttyS0', 9600)
+	mu = MaestroUART('/dev/ttyAMA0', 9600)
 	channel = 0
 
 	error = mu.get_error()

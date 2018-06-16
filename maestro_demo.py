@@ -2,7 +2,7 @@
 Demonstration program for the maestro_part library for controlling a
 servo motor with the Raspberry Pi 3 and the Pololu Maestro board.
 """
-from maestro import MaestroUART
+import maestro
 
 # min_pos and max_pos are the minimum and maxium positions for the servos
 # in quarter-microseconds. The defaults are set on the board. See the Maestro
@@ -14,7 +14,7 @@ from maestro import MaestroUART
 min_pos = 992 * 4
 max_pos = 2000 * 4
 
-mu = maestro_uart.MaestroUART('/dev/ttyS0', 9600)
+mu = maestro.MaestroUART('/dev/ttyS0', 9600)
 channel = 0
 
 error = mu.get_error()
